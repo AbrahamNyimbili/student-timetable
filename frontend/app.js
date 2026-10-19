@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api/timetable';
+const API = 'https://student-timetable-1gso.onrender.com/api/timetable';
 const fields = ['course_code','course_name','lecturer','day_of_week','start_time','end_time','venue','goal'];
 const tbody = document.getElementById('tableBody');
 const form = document.getElementById('recordForm');
