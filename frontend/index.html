@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Timetable & Goals</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f6f7fb; }
+    h1 { color: #1a237e; }
+    form, table { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 20px; }
+    form input { margin: 4px 6px 4px 0; padding: 6px 8px; width: 160px; }
+    button { padding: 6px 12px; margin-right: 6px; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
+    th { background: #e8eaf6; }
+    .btn-edit { background: #ffb300; border: none; }
+    .btn-del { background: #e53935; color: #fff; border: none; }
+  </style>
+</head>
+<body>
+  <h1>Student Timetable & Goals</h1>
+
+  <form id="recordForm">
+    <input type="hidden" id="recordId" />
+    <input id="course_code" placeholder="Course Code *" required />
+    <input id="course_name" placeholder="Course Name *" required />
+    <input id="lecturer"    placeholder="Lecturer" />
+    <input id="day_of_week" placeholder="Day" />
+    <input id="start_time"  placeholder="Start Time" />
+    <input id="end_time"    placeholder="End Time" />
+    <input id="venue"       placeholder="Venue" />
+    <input id="goal"        placeholder="Study Goal" />
+    <br /><br />
+    <button type="submit" id="submitBtn">Create</button>
+    <button type="button" onclick="resetForm()">Clear</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Code</th><th>Course</th><th>Lecturer</th>
+        <th>Day</th><th>Start</th><th>End</th><th>Venue</th>
+        <th>Goal</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
